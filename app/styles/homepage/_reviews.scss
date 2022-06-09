@@ -1,0 +1,131 @@
+.reviews {
+	&__inner {
+		background-color: #F4F0EC;
+		border-radius: 70px;
+		text-align: center;
+		padding: 100px 0;
+
+		@include mq("tablet-2") {
+			padding: 80px 0;
+		}
+
+		@include mq("tablet") {
+			padding: 60px 0;
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		margin-bottom: 50px;
+
+		span {
+			display: inline-block;
+			max-width: 280px;
+		}
+	}
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		gap: 17px;
+		padding-left: 15px;
+		padding-right: 15px;
+
+		@include mq("tablet-2") {
+			display: none;
+		}
+	}
+
+	&__item {
+		background-color: #fff;
+		border-radius: 30px;
+		max-width: 355px;
+		overflow: hidden;
+		flex: 0 1 31%;
+
+		@include mq("tablet-2") {
+			flex: 0 0 100%;
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		padding: 50px 35px 0 35px;
+		margin-bottom: 30px;
+
+		@include mq("phone") {
+			padding: 40px 20px 0 20px;
+		}
+	}
+
+	&__avatar {
+		width: 77px;
+		height: 77px;
+		object-fit: cover;
+		border-radius: 50%;
+
+		@include mq("phone") {
+			width: 67px;
+			height: 67px;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+	}
+
+	&__name {
+		font-size: 25px;
+
+		@include mq("tablet-2") {
+			font-size: 20px;
+		}
+	}
+
+	&__from {
+		font-size: 18px;
+	}
+
+	&__text {
+		font-size: 20px;
+		padding: 0 35px 45px 35px;
+		text-align: left;
+
+		@include mq("phone") {
+			padding: 0 20px 40px 20px;
+		}
+	}
+}
+
+.reviews-swiper {
+	padding: 0 15px;
+	display: none;
+	list-style: none;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	padding: 0;
+	position: relative;
+	z-index: 1;
+
+	@include mq("tablet-2") {
+		display: block;
+	}
+
+	&__list {
+		margin-bottom: 60px;
+	}
+}
+
+.swiper-pagination-bullet {
+	width: 12px;
+	height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+	background-color: $accent;
+}

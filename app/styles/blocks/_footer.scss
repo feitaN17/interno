@@ -1,0 +1,99 @@
+.footer {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		gap: 30px;
+		margin-bottom: 100px;
+
+		@include mq("tablet") {
+			justify-content: flex-start;
+			flex-wrap: wrap;
+			margin-bottom: 50px;
+		}
+	}
+
+	&__logo {
+		display: inline-block;
+		margin-bottom: 5px;
+	}
+
+	&__info {
+		max-width: 330px;
+
+		@include mq("tablet-2") {
+			max-width: 250px;
+		}
+
+		@include mq("tablet") {
+			max-width: 330px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 15px;
+		font-size: 20px;
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 15px;
+		}
+
+		@include mq("phone") {
+			font-size: 20px;
+		}
+	}
+
+	&__title {
+		font-family: 'DM Serif Display';
+		font-weight: 400;
+		font-size: 25px;
+		color: $colorTitle;
+
+		@include mq("phone") {
+			font-size: 22px;
+		}
+	}
+
+	&__address {
+		max-width: 315px;
+
+		@include mq("tablet-2") {
+			max-width: 210px;
+		}
+
+		@include mq("tablet") {
+			max-width: 315px;
+		}
+	}
+
+	&__copy {
+		padding: 35px 0;
+		border-top: 1px solid #e5e5e5;
+		text-align: center;
+
+		@include mq("phone") {
+			padding: 20px 0;
+			font-size: 18px;
+		}
+	}
+
+	&__copy-name {
+		color: $accent;
+	}
+}
+
+.soc {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+
+	&__link {
+		width: 17px;
+		height: 18px;
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: center;
+		display: inline-block;
+	}
+}

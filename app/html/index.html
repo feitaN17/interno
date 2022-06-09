@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>START</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		@include('blocks/_header.html')
+
+		<main class="main">
+
+			@include('homepage/_hero.html')
+			@include('homepage/_elements.html')
+			@include('homepage/_info.html')
+			@include('homepage/_reviews.html')
+			@include('homepage/_partners.html')
+			@include('homepage/_projects.html')
+			@include('homepage/_statistics.html')
+			@include('homepage/_blogs.html')
+			@include('homepage/_connect.html')
+
+			@include('blocks/_modal.html')
+
+		</main>
+
+		@include('blocks/_footer.html')
+	</div>
+
+	<script src="js/main.min.js"></script>
+</body>
+
+</html>

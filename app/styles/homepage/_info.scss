@@ -1,0 +1,112 @@
+.info {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 50px;
+	}
+
+	&__title {
+		margin-bottom: 20px;
+
+		@include mq("tablet-2") {
+			font-size: 25px;
+		}
+	}
+
+	&__text {
+		margin-bottom: 15px;
+
+		@include mq("tablet") {
+			font-size: 20px;
+		}
+	}
+
+	&__phone {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		margin-bottom: 35px;
+
+		@include mq("tablet") {
+			margin-bottom: 20px;
+		}
+	}
+
+	&__phone-img {
+		width: 93px;
+		height: 93px;
+		border-radius: 50%;
+		background-color: #F4F0EC;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all .3s ease-out;
+
+		@include mq("tablet-2") {
+			width: 73px;
+			height: 73px;
+		}
+
+		&:hover {
+			background-color: $accent;
+
+			&::before {
+				@include recolor($colorTitle);
+			}
+		}
+
+		&::before {
+			@include pseudo;
+			width: 34px;
+			height: 34px;
+			background-image: url('../images/icons/icon-phone.svg');
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+
+			@include mq("tablet-2") {
+				width: 26px;
+				height: 26px;
+			}
+		}
+	}
+
+	&__phone-inner {
+		display: flex;
+		flex-direction: column;
+		font-size: 24px;
+
+		@include mq("tablet-2") {
+			font-size: 18px;
+			margin-bottom: 0;
+		}
+	}
+
+	&__phone-tel {
+		margin-bottom: 10px;
+
+		@include mq("tablet-2") {
+			margin-bottom: 0;
+		}
+	}
+
+	&__img {
+		max-width: 592px;
+		width: 100%;
+		height: 635px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		border-radius: 0px 326px 0px 123px;
+		flex: 0 0 50%;
+
+		@include mq("tablet") {
+			display: none;
+		}
+	}
+
+	&__button {
+		padding: 22px 55px 22px 30px;
+	}
+}

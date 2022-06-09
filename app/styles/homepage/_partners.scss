@@ -1,0 +1,28 @@
+.partners {
+	&__inner {
+		padding: 0 50px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+		overflow-x: auto;
+	}
+
+	&__link {
+		transition: opacity .3s ease-in;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		&:hover {
+			opacity: .5;
+		}
+	}
+
+	&__img {
+		object-fit: contain;
+		height: 103px;
+		min-width: 164px;
+		max-width: 164px;
+	}
+}
