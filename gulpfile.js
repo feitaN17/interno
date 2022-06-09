@@ -23,6 +23,7 @@ import imagemin from 'gulp-imagemin'
 import concat from 'gulp-concat'
 import rsync from 'gulp-rsync'
 import del from 'del'
+import ghPages from 'gulp-gh-pages'
 
 import svgSprite from 'gulp-svg-sprite'
 import cheerio from 'gulp-cheerio'
@@ -152,23 +153,26 @@ async function clean() {
 	del('dist/**/*', { force: true })
 }
 
+// function deploy() {
+// 	return src('dist/').pipe(
+// 		rsync({
+// 			root: 'dist/',
+// 			hostname: 'username@yousite.com',
+// 			destination: 'yousite/public_html/',
+// 			// clean: true, // Mirror copy with file deletion
+// 			include: [
+// 				/* '*.htaccess' */
+// 			], // Included files to deploy,
+// 			exclude: ['**/Thumbs.db', '**/*.DS_Store'],
+// 			recursive: true,
+// 			archive: true,
+// 			silent: false,
+// 			compress: true,
+// 		})
+// 	)
+// }
 function deploy() {
-	return src('dist/').pipe(
-		rsync({
-			root: 'dist/',
-			hostname: 'username@yousite.com',
-			destination: 'yousite/public_html/',
-			// clean: true, // Mirror copy with file deletion
-			include: [
-				/* '*.htaccess' */
-			], // Included files to deploy,
-			exclude: ['**/Thumbs.db', '**/*.DS_Store'],
-			recursive: true,
-			archive: true,
-			silent: false,
-			compress: true,
-		})
-	)
+	return src('dist/').pipe(ghPages())
 }
 
 function watching() {
